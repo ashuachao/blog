@@ -1,6 +1,6 @@
 ### commonsChunk配置及应用场景分析(踩坑)
 
-1. 单入口文件入口的时候引用多次的文件不能被打包到chunk.js  
+1. 单入口文件入口的时候引用多次的文件不能被打包到chunk.js(minChunks默认的情况下,因为只有一个入口文件,所以没有公共引用。入口文件内的公共引用会通过modules的缓存,不会被分离)   
 webpack.config.js
 ```
 module.exports= {
@@ -216,9 +216,11 @@ module.exports= {
     1. name为['chunk1'] => 打包的时候chunk1只包含自身,这就是我们常用单入口分离公共类库的方式
     2. name为['chunk1', 'chunk2'] => chunk1包含自身,chunk2只包含webpackBootstrap
     3. name为['chunk2', 'chunk1'] => chunk1包含自身,chunk2不会生成(因为除去chunk1之后只有main一个入口文件,不会有公共引用)
+4. 当minChunks为Infinity时,会马上生成公共chunk,使得1不成立,chunk只包含自身.
 
 ## 总结:
 1. 单入口文件分离类库的时候定义entry{app, common}, name设置['common']
 2. 多入口文件分离类库的时候定义entry{app, app1, common}, name设置['chunk', 'common', 'load'],即common放在name[0]之后
-3. 可以看出来, commonsChunk分析依赖生成chunk是从后往前生成的
+3. 多入口文件分离类库的时候定义entry{app, app1, common}, name设置['common'],设置minChunks为infinity也可以达到common只包含类库自身
+
 
