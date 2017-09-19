@@ -1,0 +1,395 @@
+{
+  "errors": [],
+  "warnings": [],
+  "version": "3.0.0",
+  "hash": "281caef4ab3af8f62735",
+  "time": 77,
+  "publicPath": "",
+  "assetsByChunkName": {
+    "main": "main.bundle.js",
+    "chunk1": "chunk1.bundle.js",
+    "chunk2": "chunk2.bundle.js"
+  },
+  "assets": [
+    {
+      "name": "main.bundle.js",
+      "size": 307,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [
+        "main"
+      ],
+      "emitted": true
+    },
+    {
+      "name": "chunk1.bundle.js",
+      "size": 107,
+      "chunks": [
+        1
+      ],
+      "chunkNames": [
+        "chunk1"
+      ],
+      "emitted": true
+    },
+    {
+      "name": "chunk2.bundle.js",
+      "size": 5782,
+      "chunks": [
+        2
+      ],
+      "chunkNames": [
+        "chunk2"
+      ],
+      "emitted": true
+    }
+  ],
+  "entrypoints": {
+    "main": {
+      "chunks": [
+        2,
+        1,
+        0
+      ],
+      "assets": [
+        "chunk2.bundle.js",
+        "chunk1.bundle.js",
+        "main.bundle.js"
+      ]
+    },
+    "chunk1": {
+      "chunks": [
+        2,
+        1
+      ],
+      "assets": [
+        "chunk2.bundle.js",
+        "chunk1.bundle.js"
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "id": 0,
+      "rendered": true,
+      "initial": true,
+      "entry": false,
+      "extraAsync": false,
+      "size": 134,
+      "names": [
+        "main"
+      ],
+      "files": [
+        "main.bundle.js"
+      ],
+      "hash": "28c2c352d82522b3b5d4",
+      "parents": [
+        1
+      ],
+      "modules": [
+        {
+          "id": 1,
+          "identifier": "/Users/cc/Documents/FEDevelop/chaochao_project/blog/commonsChunk/main.js",
+          "name": "./commonsChunk/main.js",
+          "index": 0,
+          "index2": 2,
+          "size": 70,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "profile": {
+            "factory": 23,
+            "building": 15,
+            "dependencies": 3
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 0,
+          "source": "const chunk1 = require('./chunk1');\nconst chunk2 = require('./chunk2')"
+        },
+        {
+          "id": 2,
+          "identifier": "/Users/cc/Documents/FEDevelop/chaochao_project/blog/commonsChunk/chunk1.js",
+          "name": "./commonsChunk/chunk1.js",
+          "index": 1,
+          "index2": 0,
+          "size": 64,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": "/Users/cc/Documents/FEDevelop/chaochao_project/blog/commonsChunk/main.js",
+          "issuerId": 1,
+          "issuerName": "./commonsChunk/main.js",
+          "profile": {
+            "factory": 2,
+            "building": 3
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 1,
+              "moduleIdentifier": "/Users/cc/Documents/FEDevelop/chaochao_project/blog/commonsChunk/main.js",
+              "module": "./commonsChunk/main.js",
+              "moduleName": "./commonsChunk/main.js",
+              "type": "cjs require",
+              "userRequest": "./chunk1",
+              "loc": "1:15-34"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 1,
+          "source": "// const chunk2 = require('./chunk2')\nmodule.exports = 'chunk1';"
+        }
+      ],
+      "filteredModules": 0,
+      "origins": [
+        {
+          "moduleId": 1,
+          "module": "/Users/cc/Documents/FEDevelop/chaochao_project/blog/commonsChunk/main.js",
+          "moduleIdentifier": "/Users/cc/Documents/FEDevelop/chaochao_project/blog/commonsChunk/main.js",
+          "moduleName": "./commonsChunk/main.js",
+          "loc": "",
+          "name": "main",
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "rendered": true,
+      "initial": true,
+      "entry": false,
+      "extraAsync": false,
+      "size": 26,
+      "names": [
+        "chunk1"
+      ],
+      "files": [
+        "chunk1.bundle.js"
+      ],
+      "hash": "cb2c59fd13d0485a82e1",
+      "parents": [
+        2
+      ],
+      "modules": [
+        {
+          "id": 0,
+          "identifier": "/Users/cc/Documents/FEDevelop/chaochao_project/blog/commonsChunk/chunk2.js",
+          "name": "./commonsChunk/chunk2.js",
+          "index": 2,
+          "index2": 1,
+          "size": 26,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            1
+          ],
+          "assets": [],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "profile": {
+            "factory": 18,
+            "building": 7
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 1,
+              "moduleIdentifier": "/Users/cc/Documents/FEDevelop/chaochao_project/blog/commonsChunk/main.js",
+              "module": "./commonsChunk/main.js",
+              "moduleName": "./commonsChunk/main.js",
+              "type": "cjs require",
+              "userRequest": "./chunk2",
+              "loc": "2:15-34"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 0,
+          "source": "module.exports = 'chunk2';"
+        }
+      ],
+      "filteredModules": 0,
+      "origins": [
+        {
+          "moduleId": 0,
+          "module": "/Users/cc/Documents/FEDevelop/chaochao_project/blog/commonsChunk/chunk2.js",
+          "moduleIdentifier": "/Users/cc/Documents/FEDevelop/chaochao_project/blog/commonsChunk/chunk2.js",
+          "moduleName": "./commonsChunk/chunk2.js",
+          "loc": "",
+          "name": "chunk1",
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "rendered": true,
+      "initial": true,
+      "entry": true,
+      "extraAsync": false,
+      "size": 0,
+      "names": [
+        "chunk2"
+      ],
+      "files": [
+        "chunk2.bundle.js"
+      ],
+      "hash": "7e6b725a49d6f4d016c4",
+      "parents": [],
+      "modules": [],
+      "filteredModules": 0,
+      "origins": []
+    }
+  ],
+  "modules": [
+    {
+      "id": 0,
+      "identifier": "/Users/cc/Documents/FEDevelop/chaochao_project/blog/commonsChunk/chunk2.js",
+      "name": "./commonsChunk/chunk2.js",
+      "index": 2,
+      "index2": 1,
+      "size": 26,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "assets": [],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "profile": {
+        "factory": 18,
+        "building": 7
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 1,
+          "moduleIdentifier": "/Users/cc/Documents/FEDevelop/chaochao_project/blog/commonsChunk/main.js",
+          "module": "./commonsChunk/main.js",
+          "moduleName": "./commonsChunk/main.js",
+          "type": "cjs require",
+          "userRequest": "./chunk2",
+          "loc": "2:15-34"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [],
+      "depth": 0,
+      "source": "module.exports = 'chunk2';"
+    },
+    {
+      "id": 1,
+      "identifier": "/Users/cc/Documents/FEDevelop/chaochao_project/blog/commonsChunk/main.js",
+      "name": "./commonsChunk/main.js",
+      "index": 0,
+      "index2": 2,
+      "size": 70,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "profile": {
+        "factory": 23,
+        "building": 15,
+        "dependencies": 3
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [],
+      "depth": 0,
+      "source": "const chunk1 = require('./chunk1');\nconst chunk2 = require('./chunk2')"
+    },
+    {
+      "id": 2,
+      "identifier": "/Users/cc/Documents/FEDevelop/chaochao_project/blog/commonsChunk/chunk1.js",
+      "name": "./commonsChunk/chunk1.js",
+      "index": 1,
+      "index2": 0,
+      "size": 64,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "issuer": "/Users/cc/Documents/FEDevelop/chaochao_project/blog/commonsChunk/main.js",
+      "issuerId": 1,
+      "issuerName": "./commonsChunk/main.js",
+      "profile": {
+        "factory": 2,
+        "building": 3
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 1,
+          "moduleIdentifier": "/Users/cc/Documents/FEDevelop/chaochao_project/blog/commonsChunk/main.js",
+          "module": "./commonsChunk/main.js",
+          "moduleName": "./commonsChunk/main.js",
+          "type": "cjs require",
+          "userRequest": "./chunk1",
+          "loc": "1:15-34"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [],
+      "depth": 1,
+      "source": "// const chunk2 = require('./chunk2')\nmodule.exports = 'chunk1';"
+    }
+  ],
+  "filteredModules": 0,
+  "children": []
+}

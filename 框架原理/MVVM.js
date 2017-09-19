@@ -1,7 +1,7 @@
 // MVVM
 // 观察者模式加数据劫持
-// 观察者: 页面的改变
-// 发布者: 数据自身的set
+// 观察者: callback:页面的改变
+// 发布者: option:数据自身的set
 // 什么时候添加listener: 在数据get的时候添加对页面变更的listener
 // 什么时候发布listener: 在数据set的时候调用对应get时候存储的listener
 // sample Obeserve({})
@@ -21,7 +21,7 @@ function defineReactive(obj, key, value) {
             if (Dep.target) {
                 dep.addListener(Dep.target);
             }
-            return val;
+            return value;
         }, 
         set: function(newVal) {
             if (newVal == value) {
@@ -50,7 +50,7 @@ Watch.prototype.update = function() {
 Watch.prototype.get = function() {
     this.value = this.vm[this.name];
 }
-// 维护一个监听者
+// 维护一个依赖收集器
 function Dep() {
     this.listeners = [];
 }

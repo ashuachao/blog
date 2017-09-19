@@ -1,0 +1,103 @@
+@charset "utf-8";
+/* 字符编码define必须放在最顶端 */
+/* css最佳实践 */
+-----命名规则
+/*
+布局：以 g 为命名空间，例如：.g-wrap 、.g-header、.g-content。
+
+状态：以 s 为命名空间，表示动态的、具有交互性质的状态，例如：.s-current、s-selected。(被选中, active的状态)
+
+工具：以 u 为命名空间，表示不耦合业务逻辑的、可复用的的工具，例如：u-clearfix、u-ellipsis。(清楚浮动, 文字左偏移)
+
+组件：以 m 为命名空间，表示可复用、移植的组件模块，例如：m-slider、m-dropMenu。(模块, 分页器, 日期选择器)
+
+钩子：以 j 为命名空间，表示特定给 JavaScript 调用的类名，例如：j-request、j-open。(动态交互, 供选择器选择)
+*/
+------选择器编写规则
+/*
+当一个规则包含多个选择器时，每个选择器独占一行。
+.g-header > .g-header-des,
+.g-content ~ .g-footer {
+     
+}
+*/
+------样式编写排列规则
+/*
+每条样式独占一行。
+每条样式后面以;结尾.
+每个规则声明间用空行br分隔.
+最外层引号使用单引号.
+一个属性有多个属性值,单个属性值过长,每个属性值占一行.
+.g-footer,
+.g-header {
+  position: relative;
+}
+ 
+.g-content {
+  background:
+    linear-gradient(135deg, deeppink 25%, transparent 25%) -50px 0,
+    linear-gradient(225deg, deeppink 25%, transparent 25%) -50px 0,
+    linear-gradient(315deg, deeppink 25%, transparent 25%),
+    linear-gradient(45deg, deeppink 25%, transparent 25%);
+  }
+ 
+.g-content::before {
+  content: '';
+}
+*/
+------小数规则
+/*
+参数值和颜色参数为0-1之间的小数,省略0
+color: rgba(255, 255, 255, .6);
+长度值为0的时候省略单位
+margin: 0 auto;
+*/
+------样式编写顺序规则(按照排版)
+/*
+如果包含 content 属性，应放在最前面；
+Positioning Model 布局方式、位置，相关属性包括：position / top / right / bottom / left / z-index / display / float / ...
+Box Model 盒模型，相关属性包括：width / height / padding / margin / border / overflow / ...
+Typographic 文本排版，相关属性包括：font / line-height / text-align / word-wrap / ...
+Visual 视觉外观，相关属性包括：color / background / list-style / transform / animation / transition / ...
+
+总结来说: 布局->长宽边距->排版->外观
+*/
+------引用使用规则
+/*
+font-family 内使用引号
+body {
+  font-family: 'Microsoft YaHei', '黑体-简', '\5b8b\4f53';
+}
+background-image 的 url 内使用引号
+div {
+  background-image: url('...');
+}
+*/
+------标签或者class?
+/* 
+尽量避免使用标签名
+<div class="g-content">
+    <ul class="g-content-list">
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+    </ul>
+</div>
+编写选择器选择:
+.g-content {
+  .g-content-list {
+    .item {
+      ...
+    }
+  }
+}
+而不是
+.g-content {
+  .g-content-list {
+    li {
+      ...
+    }
+  }
+}
+*/
