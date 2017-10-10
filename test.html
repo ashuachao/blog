@@ -11,7 +11,14 @@
         
     </div>
     <div id="content"></div>
+    <input type="text" id='text'>
+    <div id="content_text"></div>
     <script>
+        var a = document.querySelector('#content_text');
+        var b = document.querySelector('#text');
+        b.addEventListener('input', function(e) {
+            a.innerHTML = e.target.value;
+        })
         // var frag = document.createDocumentFragment();
         // var child;
         // var testDiv = document.getElementById('test');
