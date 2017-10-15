@@ -13,6 +13,7 @@ function observe(obj, vm) {
     })
 }
 function defineReactive(obj, key, value) {
+    // 通过闭包 保存依赖
     var dep = new Dep();
     Object.defineProperty(obj, key, {
         // 第一次应该添加观察者,应该只观察一次
